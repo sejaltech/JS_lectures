@@ -1,24 +1,51 @@
 <html>
+
 <head>
-<body>
-    <button onclick="alert('Free Tshirt')">
-        click here to get free tshirt
+    <title>DOM practice</title>
 
-    </button>
-    <!-- internal js -->
-     
-    <script>
-        console.warn("using js from head!");
-    </script>
- </head>
+</head>
 
 <body>
-    <script>
-        console.warn("using js from body!");
-    </script>
+    <p id="first-para" > this is first p tag</p>
+    <p id="second-para"> I have 2 p tag here</p>
 
-    <!-- external js -->
-    <script src="Day_one.js"></script>
+    <ul>
+        <li></li>
+        <li></li>
+    </ul>
+    <script>
+
+        // const ptag = document.getElementById("first para");
+        const ptag = (document.getElementById("first-para"));
+        ptag.textContent = "Play";
+        console.log(ptag);
+       ptag.style = "color:red";
+       ptag.style.backgroundColor = "yellow";
+
+
+
+
+        //changing style
+       
+        // let secondParaUsingQuerrySelector = document.querySelector("#second-para");
+        // let secondparaUsingbyID = document.getElementById("second-para");
+
+        // console.log(secondparaUsingbyID);
+        // console.log(secondParaUsingQuerrySelector);
+
+        // //change the content of second p element = innerText
+        // secondparaUsingbyID.innerText = '<h1>PLAY</h1>'
+        // console.log(secondparaUsingbyID.innerText); 
+
+
+
+    </script>
+    <!-- <script src="./script.js"></script> -->
+
+    
 </body>
 
 </html>
+
+
+// parent child sibling note roots
