@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorites Lab</title>
+    <style>
+        body {
+            background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('https://i.pinimg.com/736x/93/10/9f/93109f7cc0e9f6c4ca779aa0a8fc2a8c.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            font-family: Arial, sans-serif;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #08632549;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        
+        .heart-btn {
+            font-size: 34px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .heart-btn:hover {
+            transform: scale(1.2);
+        }
+
+        .filled {
+            color: #e01e37;
+        }
+
+        h2 {
+            color: #fefae0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Favorite Items</h2>
+        <ul>
+            <li>
+                Javascript
+                <button class="heart-btn" aria-label="Favorite">&#9825;</button>
+            </li>
+            <li>
+                Python
+                <button class="heart-btn" aria-label="Favorite">&#9825;</button>
+            </li>
+            <li>
+                HTML
+                <button class="heart-btn" aria-label="Favorite">&#9825;</button>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+
+        const heartButtons = document.querySelectorAll('.heart-btn');
+
+        heartButtons.forEach(button => {
+            button.addEventListener('click', () => {
+
+                button.classList.toggle('filled');
+
+                //change heart symbol
+                if (button.classList.contains('filled')) {
+                    button.innerHTML = '&#9829;';
+                } else {
+                    button.innerHTML = '&#9825;'; // empty heart
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

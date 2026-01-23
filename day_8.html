@@ -1,0 +1,45 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Finding documents</title>
+    <style>
+        .fname {
+
+            color: red;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box" class="section">
+        Hello
+        <span>world</span>
+
+    </div>
+    <script>
+        let spanTag = document.querySelector("span");
+        let parentNode = document.querySelector("#box");
+        // parentNode.removeChild(spanTag);
+        // spanTag.replaceWith("earth");
+
+        //     let parentNode = document.querySelector("#box");
+        let newChild = document.createElement("p");
+        newChild.textContent = "sejal";
+       // newChild.style.color = "red";
+       // newChild.style = "display:inline-block"
+        // newChild.style.color = "red"
+        newChild.classList.add("fname");
+        parentNode.replaceChild(newChild, spanTag);
+        
+        //    console.log(parentNode.innerHTML);
+        //    console.log(parentNode.innerText);
+        //    console.log(parentNode.textContent);
+
+    </script>
+
+</body>
+
+</html>

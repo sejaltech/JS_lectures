@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Finding documents</title>
+</head>
+
+<body>
+    <div id="box" class="section">
+        Hello
+        <span>earth</span>
+    
+    </div>
+    <button id="btn">Click me</button>
+    <script>
+
+        let spanTag = document.querySelector("span");
+        let btn = document.querySelector("#btn");
+        btn.addEventListener("click", () => {
+            spanTag.textContent = " world";
+        });
+
+    </script>
+
+</body>
+
+</html>
