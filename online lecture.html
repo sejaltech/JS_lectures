@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        fetch('https://jsonplaceholder.typicode.com/todos/2').then((msg) => {
+            msg.json().then((data) => {
+                console.log('using then', data.title);
+            });
+        });
+
+        async function fetchTodos() {
+            let response = await fetch('https://jsonplaceholder.typicode.com/todos/2', {
+                method: 'DELETE',
+                headers: {
+                    "content-type": "application/json"
+                },
+                body: JSON.stringify({
+                    title: "order pizza"
+                })
+            },
+            );
+
+            if (!response.ok) {
+                console.log(Error, response.status);
+            }
+
+            let data = await response.json();
+            try {
+                console.log('using await', data.title);
+            } catch (error) {
+                console.error(error);
+            }
+        }
+        fetchTodos();
+    </script>
+</body>
+
+</html>

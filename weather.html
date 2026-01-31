@@ -1,0 +1,21 @@
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+           fetch('https://jsonplaceholder.typicode.com/todos/1').then((msg) => {
+               msg.json().then((data) => {
+                console.log(data.title);
+                   console.log(data.completed);
+               });
+            });
+            
+            
+        </script>
+    </body>
+    </html>
+    

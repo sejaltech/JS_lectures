@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather Widget</title>
+    <style>
+        .widget {
+            width: 250px;
+            padding: 20px;
+            background: #e3f2fd;
+            border-radius: 10px;
+            text-align: center;
+            font-family: Arial;
+            margin: 100px auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="widget">
+        <h3>Weather Widget 🌤️</h3>
+        <button onclick="loadWeather()">Load Weather</button>
+        <p id="weather"></p>
+    </div>
+
+    <script>
+        function loadWeather() {
+            fetch(
+                "https://api.open-meteo.com/v1/forecast?latitude=28.61&longitude=77.20&current_weather=true"
+            )
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("weather").innerText =
+                    "Chennai Temp: " + data.current_weather.temperature + "°C";
+            });
+        }
+    </script>
+
+</body>
+</html>
+

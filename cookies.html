@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="setCookie()">Accept Cookies</button>
+    <p></p>
+    <script>
+        if (confirm("Accept cookies")); {
+            document.cookie = "username = sejal; max-age=10; path=/";
+        }
+        pTag = document.querySelector("p");
+
+        function setCookie(){
+        pTag.innerText = document.cookie;
+        }
+    </script>
+</body>
+
+</html>
+

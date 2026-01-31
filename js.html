@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Button Example</title>
+</head>
+<body>
+
+    <button onclick = "orderPizza()">order pizza</button>
+    <button onclick = "orderPizza()">order pizza</button>
+    <script>
+        function orderPizza(){
+            setTimeout(() => {
+                console.log('accepting your order...');
+            console.log("your order was accepted...");
+
+            }, 5000)
+
+            setTimeout(() => {
+                console.log("your order was prepared...");
+            }, 10000);
+                console.log("your order is being delivered...");
+        }
+    </script>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Button Example</title>
+</head>
+
+<body>
+
+    <button onclick="orderCake()">order </button>
+    <script>
+            function helperFunction() {
+                return new Promise((resolve, reject) => {
+                    setTimeout(() => {
+
+                        resolve("cake ready");
+                    })
+
+                }, 5000);
+            }
+            async function orderCakeTwo() {
+                console.log("ordering the cake")
+               let msg =  await helperFunction().then((msg) => {});
+
+            }
+    </script>
+
+</body>
+
+</html>

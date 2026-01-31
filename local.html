@@ -1,0 +1,25 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Local Storage Example</title>
+    </head>
+    <body>
+        <form action="">
+            <label for = "">
+                username
+            </label>
+            <input type="text" id="fname">
+        </form>
+        <script>
+            let userInput = document.querySelector('#fname')
+           document.addEventListener('input', () => {
+                sessionStorage.setItem('fname', userInput.value)
+            })
+
+          userInput.value = sessionStorage.getItem('fname')
+
+        </script>
+    </body>
+    </html>
+    
